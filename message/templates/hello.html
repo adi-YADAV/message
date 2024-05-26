@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% comment %}
+    {% if x > y %}
+        <h3>{{x}} is greater</h3>
+    {% else %}
+        <h3>{{y}} is greater</h3>
+    {% endif %}
+   
+
+    {% if x > y and x > z %}
+        <h1>{{x}} is greatest</h1>
+    {% elif y > x and y > z %}
+        <h2>{{y}} is greatest</h2>
+    {% else %}
+        <h2>{{z}} is greatest </h2>
+    {% endif %}
+
+    {% for i in l %}
+        <h4>{{i}}</h4>
+    {% endfor %}
+    {% endcomment %}
+
+    {% for i in product %}
+        <h3>Loop iteration:{{forloop.counter}}</h3>
+        {% if forloop.counter = = 2 %}
+            <h3>Id: {{i.id}}</h3>
+            <h3>Product name: {{i.name}}</h3>
+            <h3>Price: {{i.price}}</h3>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
